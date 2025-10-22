@@ -1,0 +1,9 @@
+{{ dag_id }}:
+  tasks:
+    task_1:
+      operator: airflow.providers.standard.operators.bash.BashOperator
+      bash_command: "{{ command_1 }}"
+    task_2:
+      operator: airflow.providers.standard.operators.bash.BashOperator
+      bash_command: "{{ command_2 }}"
+      dependencies: [task_1]

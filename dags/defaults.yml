@@ -1,0 +1,4 @@
+schedule: "@daily"
+default_args:
+  owner: "astronomer"
+  retries: 2

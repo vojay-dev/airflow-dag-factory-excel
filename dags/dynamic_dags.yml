@@ -1,0 +1,50 @@
+dag_a:
+  tasks:
+    task_1:
+      operator: airflow.providers.standard.operators.bash.BashOperator
+      bash_command: echo 1
+    task_2:
+      operator: airflow.providers.standard.operators.bash.BashOperator
+      bash_command: echo 2
+      dependencies:
+      - task_1
+dag_b:
+  tasks:
+    task_1:
+      operator: airflow.providers.standard.operators.bash.BashOperator
+      bash_command: echo 1
+    task_2:
+      operator: airflow.providers.standard.operators.bash.BashOperator
+      bash_command: echo 2
+      dependencies:
+      - task_1
+dag_c:
+  tasks:
+    task_1:
+      operator: airflow.providers.standard.operators.bash.BashOperator
+      bash_command: echo 1
+    task_2:
+      operator: airflow.providers.standard.operators.bash.BashOperator
+      bash_command: echo 2
+      dependencies:
+      - task_1
+dag_d:
+  tasks:
+    task_1:
+      operator: airflow.providers.standard.operators.bash.BashOperator
+      bash_command: echo 1
+    task_2:
+      operator: airflow.providers.standard.operators.bash.BashOperator
+      bash_command: echo 2
+      dependencies:
+      - task_1
+dag_e:
+  tasks:
+    task_1:
+      operator: airflow.providers.standard.operators.bash.BashOperator
+      bash_command: echo 1
+    task_2:
+      operator: airflow.providers.standard.operators.bash.BashOperator
+      bash_command: echo 2
+      dependencies:
+      - task_1
